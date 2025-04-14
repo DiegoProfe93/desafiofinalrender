@@ -4,7 +4,10 @@ const userRoutes = require('./routes/userRoutes');
 const uploadRoutes = require('./routes/uploadRoutes');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: ['https://desafiofinalrender.onrender.com/api'],
+    credentials: true
+  }));
 app.use(express.json());
 app.use('/api', userRoutes);
 app.use('/api', uploadRoutes);
