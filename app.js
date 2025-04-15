@@ -5,9 +5,9 @@ const uploadRoutes = require('./routes/uploadRoutes');
 
 const app = express();
 app.use(cors({
-    origin: ['https://desafiofinalrender.onrender.com/api'],
-    credentials: true
-  }));
+  origin: ['https://desafiofinalrender.onrender.com', 'https://pruebadesafio.netlify.app'],
+  credentials: true
+}));
 app.use(express.json());
 app.use('/api', userRoutes);
 app.use('/api', uploadRoutes);
